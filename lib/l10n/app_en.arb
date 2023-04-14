@@ -1,0 +1,11 @@
+{
+    "language": "English",
+    "welcome_back": "Welcome back!",
+    "please_sign_in_to_your_account": "Please sign in to your account",
+    "login": "Login",
+    "password": "Password",
+    "forgot_password": "Forgot password?",
+    "sign_in": "Sign in",
+    "dont_have_an_account": "Don't have an account?",
+    "sign_up": "Sign up"
+}
