@@ -9,5 +9,7 @@
     "dont_have_an_account": "Don't have an account?",
     "sign_up": "Sign up",
     "already_have_an_account": "Already have an account?",
-    "repeat_password": "Repeat password"
+    "repeat_password": "Repeat password",
+    "welcome": "Welcome!",
+    "please_fill_in_all_ields": "Please fill in all fields"
 }

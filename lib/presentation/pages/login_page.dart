@@ -7,24 +7,36 @@ import '../components/button.dart';
 import '../components/text_field.dart';
 import '../theme/src/logo.dart';
 import '../theme/theme.dart';
+import 'registration_page.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
   final LoginController = TextEditingController();
   final PasswordController = TextEditingController();
+  late BuildContext currentContext;
 
-  void SignUserIn() {}
+  void SignUserIn() {
+    Navigator.push(
+        currentContext, CupertinoPageRoute(builder: (context) => Home()));
+  }
 
-  void SignUserUp() {}
+  void SignUserUp() {
+    Navigator.push(currentContext,
+        CupertinoPageRoute(builder: (context) => RegistrationPage()));
+  }
 
-  void RecoveryPassword() {}
+  void RecoveryPassword() {
+    Navigator.push(
+        currentContext, CupertinoPageRoute(builder: (context) => Home()));
+  }
 
   //static const Color _backgroundColor = Color(0xff000103);
   //static const Color _backgroundColor = Color(0xff191e29);
 
   @override
   Widget build(BuildContext context) {
+    currentContext = context;
     return Scaffold(
       //backgroundColor: _backgroundColor,
       body: SafeArea(
@@ -95,12 +107,7 @@ class LoginPage extends StatelessWidget {
               //sign in button
               MyButton(
                 text: AppLocalizations.of(context)!.sign_in,
-                onTap: () => Navigator.push(
-                  context,
-                  CupertinoPageRoute(
-                    builder: (context) => Home(),
-                  ),
-                ),
+                onTap: SignUserIn,
               ),
 
               const SizedBox(height: 50),
