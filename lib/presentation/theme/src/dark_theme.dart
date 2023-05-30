@@ -3,6 +3,7 @@ part of '../theme.dart';
 ThemeData createDarkTheme() {
   return ThemeData(
     textTheme: createTextTheme(),
+    primaryColor: AppColors.white,
     //brightness: Brightness.dark,
     //scaffoldBackgroundColor: AppColors.lighterDark,
     scaffoldBackgroundColor: AppColors.black,

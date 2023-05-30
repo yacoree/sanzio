@@ -1,5 +1,6 @@
 {
     "language": "English",
+    "appname" : "SANZIO",
     "welcome_back": "Welcome back!",
     "please_sign_in_to_your_account": "Please sign in to your account",
     "login": "Login",
@@ -11,5 +12,13 @@
     "already_have_an_account": "Already have an account?",
     "repeat_password": "Repeat password",
     "welcome": "Welcome!",
-    "please_fill_in_all_ields": "Please fill in all fields"
+    "please_fill_in_all_ields": "Please fill in all fields",
+    "continueButton": "Continue",
+    "search": "Search",
+    "email": "Email",
+    "invalid_email": "Invalid Email",
+    "too_short_password": "The password must be more than 5 characters",
+    "please_enter_the_passwod": "Please enter the passwod",
+    "passwords_must_match": "Passwords must match",
+    "incorrect_email_or_password": "Incorrect email or password"
 }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "643038962034",
+    "project_id": "sanzio-daf26",
+    "storage_bucket": "sanzio-daf26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643038962034:android:79834d0e2512ce989d7deb",
+        "android_client_info": {
+          "package_name": "com.example.sanzio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP87DUdgn5DjCyR4NnGqdXTp2l4Z7gWMY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

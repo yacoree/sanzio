@@ -1,5 +1,5 @@
-import '/domain/model/furniture.dart';
+import '../model/product.dart';
 
 abstract class FurnitureRepository {
-  Future<Furniture> getFurniture(int id);
+  //Future<Furniture> getFurniture(int id);
 }

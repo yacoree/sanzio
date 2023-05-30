@@ -1,6 +1,7 @@
 part of '../theme.dart';
 
-const headline1 = TextStyle(fontWeight: FontWeight.w400, fontSize: 32);
+const headline0 = TextStyle(fontWeight: FontWeight.bold, fontSize: 36);
+const headline1 = TextStyle(fontWeight: FontWeight.w700, fontSize: 32);
 const headline2 = TextStyle(fontWeight: FontWeight.w400, fontSize: 18);
 const headline3 = TextStyle(fontWeight: FontWeight.w400, fontSize: 16);
 const headline4 = TextStyle(fontWeight: FontWeight.w400, fontSize: 14);
@@ -15,6 +16,9 @@ abstract class AppColors {
   static const black = Colors.black;
   static const grey = Colors.grey;
   static const pink = Colors.pink;
+  static const red = Colors.red;
+
+  static const lightPink = Color(0xFFFF4848);
 
   static const darkerGrey = Color(0xFF6C6C6C);
   static const darkestGrey = Color(0xFF626262);

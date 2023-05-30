@@ -2,28 +2,57 @@ import 'package:flutter/material.dart';
 
 import '../theme/theme.dart';
 
-class MyTextField extends StatelessWidget {
-  final controller;
+class MyTextField extends StatefulWidget {
+  final TextEditingController controller;
   final String ihintText;
-  final bool obscureText;
+  final String? Function(String?)? validator;
 
-  const MyTextField({
-    super.key,
-    required this.controller,
-    required this.ihintText,
-    required this.obscureText,
-  });
+  const MyTextField(
+      {super.key,
+      required this.controller,
+      required this.ihintText,
+      this.validator});
+
+  @override
+  State<StatefulWidget> createState() => MyTextFieldState();
+}
+
+class MyTextFieldState extends State<MyTextField> {
+  FocusNode? focusNode;
+  String? errorMessage;
+  @override
+  void initState() {
+    super.initState();
+    if (widget.validator == null) return;
+
+    focusNode = FocusNode();
+    focusNode!.addListener(() {
+      if (!focusNode!.hasFocus) {
+        setState(() {
+          errorMessage = widget.validator!.call(widget.controller.text);
+        });
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25.0),
-      child: TextField(
-        controller: controller,
-        obscureText: obscureText,
+      child: TextFormField(
+        focusNode: focusNode,
+        validator: widget.validator,
+        controller: widget.controller,
         cursorColor: Theme.of(context).extension<ThemeColors>()!.coursorColor,
         style: Theme.of(context).extension<ThemeTextStyles>()!.appDescription,
         decoration: InputDecoration(
+          errorText: errorMessage,
+          errorBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.transparent),
+              borderRadius: BorderRadius.all(Radius.circular(15))),
+          focusedErrorBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.transparent),
+              borderRadius: BorderRadius.all(Radius.circular(15))),
           enabledBorder: const OutlineInputBorder(
             borderSide: BorderSide(color: Colors.transparent),
             borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -35,7 +64,7 @@ class MyTextField extends StatelessWidget {
           fillColor: Theme.of(context)
               .extension<ThemeColors>()!
               .appContainerBackground,
-          hintText: ihintText,
+          hintText: widget.ihintText,
           //helperText: ihintText,
           hintStyle:
               Theme.of(context).extension<ThemeTextStyles>()!.appDescription,

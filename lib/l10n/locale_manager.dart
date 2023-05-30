@@ -21,7 +21,7 @@ class LocaleManager {
   }
 
   static void setLocale(Locale locale) {
-    if (!AppLocalizations.delegate.isSupported(locale)) return;
+    if (!isSupported(locale)) return;
     _locale = locale;
     print("change locale on " + locale.languageCode);
   }

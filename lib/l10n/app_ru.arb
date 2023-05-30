@@ -11,5 +11,13 @@
     "already_have_an_account": "Уже есть аккаунт?",
     "repeat_password": "Повторите пароль",
     "welcome": "Добро пожаловать!",
-    "please_fill_in_all_ields": "Пожалуйста заполните все поля"
+    "please_fill_in_all_ields": "Пожалуйста заполните все поля",
+    "continueButton": "Продолжить",
+    "search": "Поиск",
+    "email": "Почта",
+    "invalid_email": "Некорректная почта",
+    "too_short_password": "Пароль должен быть длиннее 5 символов",
+    "please_enter_the_passwod": "Пожалуйста введите пароль",
+    "passwords_must_match": "Парои должны совпадать",
+    "incorrect_email_or_password": "Неверная почта или пароль"
 }
